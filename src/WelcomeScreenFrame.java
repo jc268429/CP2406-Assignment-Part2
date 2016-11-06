@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
  */
 public class WelcomeScreenFrame extends JFrame implements ActionListener
 {
-    static
+    static GUIControl gInstance;
 
     JLabel welcomeMessage = new JLabel("Welcome to Mineral Super Trumps");
     JButton playButton = new JButton("Play");
@@ -18,8 +18,10 @@ public class WelcomeScreenFrame extends JFrame implements ActionListener
     JFrame welcomeFrame = new JFrame();
 
 
-
-
+    public static void getGUIControl(GUIControl guiInstance)
+    {
+        gInstance = guiInstance;
+    }
 
     public WelcomeScreenFrame()
     {
@@ -51,7 +53,7 @@ public class WelcomeScreenFrame extends JFrame implements ActionListener
     {
         if (action.getSource() == playButton)
         {
-            JOptionPane.showMessageDialog(null, "The Game Will now begin.");
+            gInstance.startPlayerAmount();
             dispose();
             // write start get players
         }

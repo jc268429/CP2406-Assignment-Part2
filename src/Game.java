@@ -12,6 +12,7 @@ public class Game
     static Integer handCardValue;
     static Integer pileCardValue;
     static int cardPileIndex;
+    static int playerAmt;
 
     Game()
     {
@@ -20,6 +21,7 @@ public class Game
         this.handCardValue = null;
         this.pileCardValue = null;
         this.cardPileIndex = 0;
+        this.playerAmt = 0;
 
     }
 
